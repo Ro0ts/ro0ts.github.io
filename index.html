@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxe JokenFight</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json"> 
+</head>
+<body>
+    <h1>Boxe JokenFight!</h1>
+
+    <div id="arena">
+        <div class="lutador-container">
+            <img id="lutador-jogador" class="lutador" src="jogador_parado.png" alt="Lutador Jogador">
+            <div id="vida-jogador-bar" class="barra-vida"><div id="vida-jogador-progresso" class="progresso"></div></div>
+        </div>
+
+        <div id="impacto">💥</div>
+
+        <div class="lutador-container">
+            <img id="lutador-cpu" class="lutador" src="cpu_parado.png" alt="Lutador CPU">
+            <div id="vida-cpu-bar" class="barra-vida"><div id="vida-cpu-progresso" class="progresso"></div></div>
+        </div>
+    </div>
+
+    <div id="placar">
+        <span id="vida-jogador">50</span> vs <span id="vida-cpu">50</span>
+    </div>
+
+    <div id="botoes">
+        <div>
+            <button onclick="executarRodada('jab')">JAB</button>
+            <button onclick="executarRodada('direto')">DIRETO</button>
+            <button onclick="executarRodada('gancho')">GANCHO</button>
+        </div>
+        <button id="btn-reiniciar" onclick="reiniciarJogo()" style="margin-top: 15px;">REINICIAR LUTA</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
